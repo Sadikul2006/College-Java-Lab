@@ -137,23 +137,47 @@
 
 
 // Q.8  Find the ASCII value of a Character.
-import java.util.Scanner;
+// import java.util.Scanner;
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the Character : ");
+//         char ch = sc.next().charAt(0);
+
+//         int ascii_val = (int) ch;
+        
+//         System.out.println("ASCII Value of " +  ch + " : " + ascii_val);
+//     }
+// } 
+
+
+
+// Q.9  To check whether a number is a perfect number or not.
+import java.util.*;
 class AllClgLabProgram {
     public static void main(String args[]) {
-
+        int sum = 0;
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the Character : ");
-        char ch = sc.next().charAt(0);
+        System.out.print("Enter the Number : ");
+        int num = sc.nextInt();
 
-        int ascii_val = (int) ch;
-        
-        System.out.println("ASCII Value of " +  ch + " : " + ascii_val);
+        for(int i = 1; i < num; i++) {
+            if(num % i == 0) {
+                sum += i;
+            }
+        }
+
+        if(sum == num) {
+            System.out.print(num + " is perfect number.");
+        }else {
+            System.out.print(num + " is not perfect number.");
+        }
     }
 } 
 
-
-// Q.9  To check whether a number is a perfect number or not.    
 // Q.10  To check Armstrong number.    
 // Q.11  To check whether a number is Prime or not.    
 // Q.12  write a program to demonstrate that String class is immutable whereas String Buffer and StringBuilder are mutable.    
