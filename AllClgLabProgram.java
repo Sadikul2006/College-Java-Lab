@@ -123,7 +123,17 @@
 // }
 
 
-// Q.7  Convert long to int.    
+// Q.7  Convert long to int. 
+class AllClgLabProgram {
+    public static void main(String args[]) {
+        long num = 1000000L;
+        int result = (int) num;
+
+        System.out.println("Long Value : " + num);
+        System.out.println("Int Value : " + result);
+    }
+}
+
 // Q.8  Find the ASCII value of a Character.    
 // Q.9  To check whether a number is a perfect number or not.    
 // Q.10  To check Armstrong number.    
