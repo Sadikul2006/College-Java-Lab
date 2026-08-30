@@ -155,30 +155,64 @@
 
 
 // Q.9  To check whether a number is a perfect number or not.
+// import java.util.*;
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+//         int sum = 0;
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the Number : ");
+//         int num = sc.nextInt();
+
+//         for(int i = 1; i < num; i++) {
+//             if(num % i == 0) {
+//                 sum += i;
+//             }
+//         }
+
+//         if(sum == num) {
+//             System.out.print(num + " is perfect number.");
+//         }else {
+//             System.out.print(num + " is not perfect number.");
+//         }
+//     }
+// } 
+
+
+
+// Q.10  To check Armstrong number. 
 import java.util.*;
 class AllClgLabProgram {
-    public static void main(String args[]) {
-        int sum = 0;
+    public static void main (String args[]) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the Number : ");
+        System.out.print("Enter the number : ");
         int num = sc.nextInt();
 
-        for(int i = 1; i < num; i++) {
-            if(num % i == 0) {
-                sum += i;
-            }
+        int c = 0, sum = 0, temp = num;
+        while(temp > 0) {
+            temp /= 10;
+            c++;
         }
 
-        if(sum == num) {
-            System.out.print(num + " is perfect number.");
+        temp = num;
+        while(temp > 0) {
+            int digit = temp % 10;
+            temp /= 10;
+            sum += Math.pow(digit, c);
+        }
+
+        if(num == sum) {
+            System.out.print(num + " is Armstrong Number.");
         }else {
-            System.out.print(num + " is not perfect number.");
+            System.out.print(num + " is Not Armstrong Number.");
         }
     }
-} 
+}
 
-// Q.10  To check Armstrong number.    
+
+
+
 // Q.11  To check whether a number is Prime or not.    
 // Q.12  write a program to demonstrate that String class is immutable whereas String Buffer and StringBuilder are mutable.    
 // Q.13  Write a program to check whether a string is a Palindrome or not    
