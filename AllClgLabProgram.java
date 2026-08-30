@@ -124,17 +124,35 @@
 
 
 // Q.7  Convert long to int. 
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+//         long num = 1000000L;
+//         int result = (int) num;
+
+//         System.out.println("Long Value : " + num);
+//         System.out.println("Int Value : " + result);
+//     }
+// }
+
+
+
+// Q.8  Find the ASCII value of a Character.
+import java.util.Scanner;
 class AllClgLabProgram {
     public static void main(String args[]) {
-        long num = 1000000L;
-        int result = (int) num;
 
-        System.out.println("Long Value : " + num);
-        System.out.println("Int Value : " + result);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the Character : ");
+        char ch = sc.next().charAt(0);
+
+        int ascii_val = (int) ch;
+        
+        System.out.println("ASCII Value of " +  ch + " : " + ascii_val);
     }
-}
+} 
 
-// Q.8  Find the ASCII value of a Character.    
+
 // Q.9  To check whether a number is a perfect number or not.    
 // Q.10  To check Armstrong number.    
 // Q.11  To check whether a number is Prime or not.    
