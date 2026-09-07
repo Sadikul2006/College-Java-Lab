@@ -247,33 +247,51 @@
 
 
 // Q.12  write a program to demonstrate that String class is immutable whereas String Buffer and StringBuilder are mutable.
-class AllClgLabProgram {
-    public static void main(String args[]) {
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
 
-        // String - Immutable
-        String str = "Hello";
-        str.concat(" World");
+//         // String - Immutable
+//         String str = "Hello";
+//         str.concat(" World");
 
-        System.out.println("String: " + str);
+//         System.out.println("String: " + str);
 
-        // StringBuffer - Mutable
-        StringBuffer sb = new StringBuffer("Hello");
-        sb.append(" World");
+//         // StringBuffer - Mutable
+//         StringBuffer sb = new StringBuffer("Hello");
+//         sb.append(" World");
 
-        System.out.println("StringBuffer: " + sb);
+//         System.out.println("StringBuffer: " + sb);
 
-        // StringBuilder - Mutable
-        StringBuilder sbd = new StringBuilder("Hello");
-        sbd.append(" World");
+//         // StringBuilder - Mutable
+//         StringBuilder sbd = new StringBuilder("Hello");
+//         sbd.append(" World");
 
-        System.out.println("StringBuilder: " + sbd);
-    }
-}
+//         System.out.println("StringBuilder: " + sbd);
+//     }
+// }
 
 
   
 // Q.13  Write a program to check whether a string is a Palindrome or not 
-   
+import java.util.*;
+class AllClgLabProgram {
+    public static void main (String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter String : ");
+        String st = sc.next();
+        int j = st.length()-1;
+        for(int i = 0; i < j/2; i++) {
+            if(st.charAt(i) != st.charAt(j-i)) {
+                System.out.println("Not Palindrome!");
+                return ;
+            }
+        }
+        System.out.println("Palindrome!");
+    }
+}
+
+
 // Q.14  Write a program to count the occurrence of the given character in a string?    
 // Q.15  Write a program to count no of vowels and consonants from a String.    
 // Q.16  Write a program to print the area of a rectangle by creating a class named 'Area' having two methods.
