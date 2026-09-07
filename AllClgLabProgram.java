@@ -214,40 +214,66 @@
 
 
 // Q.11 To check whether a number is Prime or not.
-import java.util.*;
+// import java.util.*;
 
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter Number: ");
+//         int num = sc.nextInt();
+//         boolean is_prime = true;
+
+//         if (num <= 1) {
+//             is_prime = false;
+//         } else {
+//             for (int i = 2; i <= Math.sqrt(num); i++) {
+//                 if (num % i == 0) {
+//                     is_prime = false;
+//                     break;
+//                 }
+//             }
+//         }
+
+//         if (is_prime == false) {
+//             System.out.println(num + " is not a prime number!");
+//         } else {
+//             System.out.println(num + " is a prime number!");
+//         }
+//     }
+// }
+
+
+
+
+// Q.12  write a program to demonstrate that String class is immutable whereas String Buffer and StringBuilder are mutable.
 class AllClgLabProgram {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Enter Number: ");
-        int num = sc.nextInt();
-        boolean is_prime = true;
 
-        if (num <= 1) {
-            is_prime = false;
-        } else {
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    is_prime = false;
-                    break;
-                }
-            }
-        }
+        // String - Immutable
+        String str = "Hello";
+        str.concat(" World");
 
-        if (is_prime == false) {
-            System.out.println(num + " is not a prime number!");
-        } else {
-            System.out.println(num + " is a prime number!");
-        }
+        System.out.println("String: " + str);
+
+        // StringBuffer - Mutable
+        StringBuffer sb = new StringBuffer("Hello");
+        sb.append(" World");
+
+        System.out.println("StringBuffer: " + sb);
+
+        // StringBuilder - Mutable
+        StringBuilder sbd = new StringBuilder("Hello");
+        sbd.append(" World");
+
+        System.out.println("StringBuilder: " + sbd);
     }
 }
 
 
-
-
-// Q.12  write a program to demonstrate that String class is immutable whereas String Buffer and StringBuilder are mutable.    
-// Q.13  Write a program to check whether a string is a Palindrome or not    
+  
+// Q.13  Write a program to check whether a string is a Palindrome or not 
+   
 // Q.14  Write a program to count the occurrence of the given character in a string?    
 // Q.15  Write a program to count no of vowels and consonants from a String.    
 // Q.16  Write a program to print the area of a rectangle by creating a class named 'Area' having two methods.
