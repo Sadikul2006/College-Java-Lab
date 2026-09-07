@@ -273,27 +273,47 @@
 
   
 // Q.13  Write a program to check whether a string is a Palindrome or not 
+// import java.util.*;
+// class AllClgLabProgram {
+//     public static void main (String args[]) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter String : ");
+//         String st = sc.next();
+//         int j = st.length()-1;
+//         for(int i = 0; i < j/2; i++) {
+//             if(st.charAt(i) != st.charAt(j-i)) {
+//                 System.out.println("Not Palindrome!");
+//                 return ;
+//             }
+//         }
+//         System.out.println("Palindrome!");
+//     }
+// }
+
+
+// Q.14  Write a program to count the occurrence of the given character in a string? 
 import java.util.*;
 class AllClgLabProgram {
     public static void main (String args[]) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter String : ");
-        String st = sc.next();
-        int j = st.length()-1;
-        for(int i = 0; i < j/2; i++) {
-            if(st.charAt(i) != st.charAt(j-i)) {
-                System.out.println("Not Palindrome!");
-                return ;
-            }
+        String str = sc.next();
+        System.out.print("Enter Character : ");
+        Character ch = sc.next().charAt(0);
+
+        int count = 0;
+        for(int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == ch) count++;
         }
-        System.out.println("Palindrome!");
+
+        System.out.println("Occurrence : " + count);
     }
 }
 
 
-// Q.14  Write a program to count the occurrence of the given character in a string?    
-// Q.15  Write a program to count no of vowels and consonants from a String.    
+// Q.15  Write a program to count no of vowels and consonants from a String.  
 // Q.16  Write a program to print the area of a rectangle by creating a class named 'Area' having two methods.
 //       First method named as 'setDim' takes length and breadth of the rectangle as parameters and the second method 
 //       named as 'getArea' returns the area of the rectangle. Length and breadth of the rectangle are entered through the keyboard.    
