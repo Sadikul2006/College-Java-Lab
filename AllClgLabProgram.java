@@ -383,24 +383,66 @@
 // Q.17  Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. 
 //       Assign the value of roll_no as '1' and that of name as "Sadikul" by creating an object of the class Student. 
 
+// class Student {
+//     String name;
+//     int roll_no;
+// }
 
-class Student {
-    String name;
-    int roll_no;
-}
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+//         Student st = new Student();
+//         st.name = "Sadikul";
+//         st.roll_no = 1;
 
+//         System.out.println("Name : " + st.name);
+//         System.out.println("Roll No : " + st.roll_no);
+//     }
+// }
+
+
+
+// Q.18 Write a java program to implement fixed size stack of integers.
+import java.util.*;
 class AllClgLabProgram {
-    public static void main(String args[]) {
-        Student st = new Student();
-        st.name = "Sadikul";
-        st.roll_no = 1;
 
-        System.out.println("Name : " + st.name);
-        System.out.println("Roll No : " + st.roll_no);
+    static int[] stack;
+    static int top = -1;
+    static Scanner sc = new Scanner(System.in);
+
+    static void push() {
+        if (top == stack.length - 1)
+            System.out.println("Stack Overflow!");
+        else {
+            System.out.print("Enter value: ");
+            stack[++top] = sc.nextInt();
+            System.out.println("Value pushed successfully!");
+        }
+    }
+
+    static void pop() {
+        if (top == -1)
+            System.out.println("Stack Underflow!");
+        else
+            System.out.println("Popped: " + stack[top--]);
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Enter Stack size: ");
+        stack = new int[sc.nextInt()];
+
+        while (true) {
+            System.out.print("\n1.Push  2.Pop  3.Exit\nChoose: ");
+            int op = sc.nextInt();
+
+            switch (op) {
+                case 1 -> push();
+                case 2 -> pop();
+                case 3 -> { return; }
+                default -> System.out.println("Invalid Input!");
+            }
+        }
     }
 }
 
 
-
-// Q.18  Write a java program to implement fixed size stack of integers.    
 // Q.19.  Write a java program to overload three methods named with addition() having different parameters. 
