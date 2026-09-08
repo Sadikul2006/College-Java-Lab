@@ -346,44 +346,61 @@
 // Q.16  Write a program to print the area of a rectangle by creating a class named 'Area' having two methods.
 //       First method named as 'setDim' takes length and breadth of the rectangle as parameters and the second method 
 //       named as 'getArea' returns the area of the rectangle. Length and breadth of the rectangle are entered through the keyboard. 
-import java.util.*;
 
-class Area {
+// import java.util.*;
+// class Area {
+//     int length;
+//     int breadth;
 
-    int length;
-    int breadth;
+//     void setDim(int l, int b) {
+//         length = l;
+//         breadth = b;
+//     }
 
-    void setDim(int l, int b) {
-        length = l;
-        breadth = b;
-    }
+//     int getArea() {
+//         return length * breadth;
+//     }
+// }
 
-    int getArea() {
-        return length * breadth;
-    }
+// class AllClgLabProgram {
+//     public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter Length : ");
+//         int l = sc.nextInt();
+//         System.out.print("Enter Breadth : ");
+//         int b = sc.nextInt();
+
+//         Area obj = new Area();
+//         obj.setDim(l, b);
+
+//         System.out.println("Area of Rectangle : " + obj.getArea());
+//     }
+// }
+
+
+
+// Q.17  Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. 
+//       Assign the value of roll_no as '1' and that of name as "Sadikul" by creating an object of the class Student. 
+
+
+class Student {
+    String name;
+    int roll_no;
 }
 
 class AllClgLabProgram {
     public static void main(String args[]) {
+        Student st = new Student();
+        st.name = "Sadikul";
+        st.roll_no = 1;
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter Length : ");
-        int l = sc.nextInt();
-
-        System.out.print("Enter Breadth : ");
-        int b = sc.nextInt();
-
-        Area obj = new Area();
-
-        obj.setDim(l, b);
-
-        System.out.println("Area of Rectangle : " + obj.getArea());
+        System.out.println("Name : " + st.name);
+        System.out.println("Roll No : " + st.roll_no);
     }
 }
 
 
 
-// Q.17  Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. Assign the value of roll_no as '2' and that of name as "John" by creating an object of the class Student.    
 // Q.18  Write a java program to implement fixed size stack of integers.    
 // Q.19.  Write a java program to overload three methods named with addition() having different parameters. 
