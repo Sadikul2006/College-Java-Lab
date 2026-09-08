@@ -314,36 +314,76 @@
 
 
 // Q.15  Write a program to count no of vowels and consonants from a String.
-import java.util.*;
-class Q15 {
-    public static void main (String args[]) {
-        Scanner sc = new Scanner(System.in);
+// import java.util.*;
+// class AllClgLabProgram {
+//     public static void main (String args[]) {
+//         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter String : ");
-        String str = sc.next();
+//         System.out.print("Enter String : ");
+//         String str = sc.next();
 
-        int vowels = 0, consonants = 0;
-        for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == 'A' || str.charAt(i) == 'E' || 
-            str.charAt(i) == 'I' || str.charAt(i) == 'O' || 
-            str.charAt(i) == 'U' || str.charAt(i) == 'a' || 
-            str.charAt(i) == 'e' || str.charAt(i) == 'i' || 
-            str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+//         int vowels = 0, consonants = 0;
+//         for(int i = 0; i < str.length(); i++) {
+//             if(str.charAt(i) == 'A' || str.charAt(i) == 'E' || 
+//             str.charAt(i) == 'I' || str.charAt(i) == 'O' || 
+//             str.charAt(i) == 'U' || str.charAt(i) == 'a' || 
+//             str.charAt(i) == 'e' || str.charAt(i) == 'i' || 
+//             str.charAt(i) == 'o' || str.charAt(i) == 'u') {
                 
-                vowels++;
-            } else {
-                consonants++;
-            }
-        }
+//                 vowels++;
+//             } else {
+//                 consonants++;
+//             }
+//         }
 
-        System.out.println("vowels : " + vowels);
-        System.out.println("consonants : " + consonants);
-    }
-}
+//         System.out.println("vowels : " + vowels);
+//         System.out.println("consonants : " + consonants);
+//     }
+// }
+
+
 
 // Q.16  Write a program to print the area of a rectangle by creating a class named 'Area' having two methods.
 //       First method named as 'setDim' takes length and breadth of the rectangle as parameters and the second method 
-//       named as 'getArea' returns the area of the rectangle. Length and breadth of the rectangle are entered through the keyboard.    
+//       named as 'getArea' returns the area of the rectangle. Length and breadth of the rectangle are entered through the keyboard. 
+import java.util.*;
+
+class Area {
+
+    int length;
+    int breadth;
+
+    void setDim(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    int getArea() {
+        return length * breadth;
+    }
+}
+
+class AllClgLabProgram {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Length : ");
+        int l = sc.nextInt();
+
+        System.out.print("Enter Breadth : ");
+        int b = sc.nextInt();
+
+        Area obj = new Area();
+
+        obj.setDim(l, b);
+
+        System.out.println("Area of Rectangle : " + obj.getArea());
+    }
+}
+
+
+
 // Q.17  Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. Assign the value of roll_no as '2' and that of name as "John" by creating an object of the class Student.    
 // Q.18  Write a java program to implement fixed size stack of integers.    
 // Q.19.  Write a java program to overload three methods named with addition() having different parameters. 
